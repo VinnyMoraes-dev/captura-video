@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get User Media</title>
+    <style>
+
+    body {
+    background: rgb(70, 19, 19);
+    font: normal 15pt Arial;
+    overflow: hidden;
+    }
+
+    header {
+    color: white;
+    text-align: center;
+    }
+
+    section {
+    background: white;
+    border-radius: 10pt;
+    padding: 15px;
+    width: 780px;
+    height: 400px;
+    margin: auto;
+    box-shadow: 3px 3px 10px rgb(0, 0, 0, 0.363);
+    }
+
+    #button-center {
+        position: relative;
+        left: 280px;
+    }
+
+    #align-video {
+        position: relative;
+        left: 60px;
+    }
+
+    button {
+    font-size: 25px;
+    background-color: rgb(70, 19, 19);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    margin-left: 0.2rem;
+    }
+
+    button:hover {
+    background-color: blue;
+    color:white;
+    transition-delay: 0.2s;
+    transform: scale(1.2);
+    cursor: pointer;
+    }
+
+    canvas, video {
+    margin: 10px 0;
+    border-radius: 20px;
+    }
+
+    a {
+    position: relative;
+    left: 520px;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Captura de Vídeo</h1>
+    </header>
+
+    <section>
+        <div id="button-center">
+            <button onclick="iniciar()">Start</button>
+            <button onclick="parar()">Pause</button>
+            <button onclick="tirarFoto()">Photo</button><br>
+        </div>
+        <div id="align-video">
+            <video width="320" height="240" id="video"></video>
+            <canvas width="320" height="240" id="canvas"></canvas><br>
+        </div>
+            <a id="dl" href="#" download>Download da Foto</a>
+    </section>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
